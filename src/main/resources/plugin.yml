@@ -1,0 +1,5 @@
+name: StrikeFriendlyFire
+version: '${project.version}'
+main: dev.iiahmed.strikefriendlyfire.StrikeFriendlyFire
+depend: [ StrikePractice, PlaceholderAPI ]
+description: Friendly Fire Parties in FFA
