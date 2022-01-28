@@ -1,8 +1,7 @@
 package dev.iiahmed.strikefriendlyfire.hook;
 
+import dev.iiahmed.strikefriendlyfire.StrikeFriendlyFire;
 import ga.strikepractice.StrikePractice;
-import ga.strikepractice.api.StrikePracticeAPI;
-import ga.strikepractice.fights.Fight;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.clip.placeholderapi.expansion.Relational;
 import org.bukkit.entity.Player;
@@ -29,15 +28,8 @@ public class PlaceholderManager extends PlaceholderExpansion implements Relation
         if(one == null || two == null)
             return null;
         if(identifier.equalsIgnoreCase("friendly")){
-            StrikePracticeAPI api = StrikePractice.getAPI();
-            Fight firstFight = api.getFight(one);
-            Fight secondFight= api.getFight(two);
-            if(firstFight != null && firstFight.equals(secondFight)){
-                if(firstFight.getArena() != null && firstFight.getArena().isFFA()){
-                    if(api.getParty(one) != null && api.getParty(one).getPlayers().contains(two)){
-                        return StrikePractice.getInstance().getConfig().getString("team1-prefix");
-                    }
-                }
+            if(StrikeFriendlyFire.getInstance().isFrindly(one, two)){
+                return StrikePractice.getInstance().getConfig().getString("team1-prefix");
             }
         }
         return null;
