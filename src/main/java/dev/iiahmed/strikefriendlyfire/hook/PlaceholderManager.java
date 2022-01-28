@@ -26,12 +26,12 @@ public class PlaceholderManager extends PlaceholderExpansion implements Relation
     @Override
     public String onPlaceholderRequest(Player one, Player two, String identifier) {
         if(one == null || two == null)
-            return null;
+            return "";
         if(identifier.equalsIgnoreCase("friendly")){
             if(StrikeFriendlyFire.getInstance().isFrindly(one, two)){
                 return StrikePractice.getInstance().getConfig().getString("team1-prefix");
             }
         }
-        return null;
+        return "";
     }
 }
