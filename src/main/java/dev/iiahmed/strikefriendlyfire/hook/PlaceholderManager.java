@@ -28,7 +28,7 @@ public class PlaceholderManager extends PlaceholderExpansion implements Relation
         if(one == null || two == null)
             return "";
         if("friendly".equals(identifier)
-                && StrikeFriendlyFire.getInstance().isFrindly(one, two)){
+                && StrikeFriendlyFire.getInstance().isFriendly(one, two)){
             return StrikePractice.getInstance().getConfig().getString("team1-prefix");
         }
         return "";

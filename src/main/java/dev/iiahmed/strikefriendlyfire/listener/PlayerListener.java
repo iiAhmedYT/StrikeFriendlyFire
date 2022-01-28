@@ -13,7 +13,7 @@ public class PlayerListener implements Listener {
         if (event.getEntity() instanceof Player && event.getDamager() instanceof Player) {
             Player player = (Player) event.getEntity();
             Player damager = (Player) event.getDamager();
-            if (StrikeFriendlyFire.getInstance().isFrindly(player, damager)) {
+            if (StrikeFriendlyFire.getInstance().isFriendly(player, damager)) {
                 event.setCancelled(true);
             }
         }

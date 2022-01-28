@@ -23,7 +23,7 @@ public final class StrikeFriendlyFire extends JavaPlugin {
         new PlaceholderManager().register();
     }
 
-    public boolean isFrindly(Player one, Player two){
+    public boolean isFriendly(Player one, Player two){
         StrikePracticeAPI api = StrikePractice.getAPI();
         if(!api.isInFight(one) || api.isInFight(two)) return false;
         Fight firstFight = api.getFight(one);
