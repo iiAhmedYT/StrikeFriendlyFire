@@ -11,7 +11,8 @@ you i cancel the damage.
 
 ### Placeholders?
 Yes there is one placeholder available
-#### %rel_StrikeFF_friendly%
+> %rel_StrikeFF_friendly%
+
 wha? whats that?
 Simple. its a relational placeholder 
 that works for TAB that returns `team1-color`
